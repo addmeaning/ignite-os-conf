@@ -1,0 +1,23 @@
+1)
+
+    kubectl create namespace ignite
+
+2)
+
+    kubectl create -f service.yaml
+
+3)
+
+    kubectl create sa ignite -n ignite
+
+4)
+
+    kubectl create -f cluster-role.yaml
+
+5)
+
+    kubectl create configmap ignite-config -n ignite --from-file=node-configuration.xml
+
+6)
+
+    kubectl create -f stateful-set.yaml
